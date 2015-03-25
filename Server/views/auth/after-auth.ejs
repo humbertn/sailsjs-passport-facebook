@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Respuesta - Autorizado</title>
+	</head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="utf-8" content="IE=edge, chrome=1"/>
+	<body>	
+		<script>	
+
+			function getURLParameter(name) {
+			  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+			}
+
+			var data = {
+				token: getURLParameter('token'),
+				email: getURLParameter('email')		
+			};
+
+			if (window.opener) {
+				window.opener.focus();
+				window.opener.postMessage(data, 'http://localhost'); //postMessage only supported in HTML5
+		    	window.close();		       		    	   
+			}			
+		    
+		</script>
+	</body>
+</html>
