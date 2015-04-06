@@ -173,6 +173,7 @@ var AuthController = {
         var email = req.user.email;
         var jwt = require('jsonwebtoken');
                         
+        // jwt.sign req.user.id
         var token = jwt.sign({ user: req.user}, 'secret');  // Sign of the jwt token
         res.redirect('/verificado?token=' + token+'&email='+email); 
 

@@ -1,0 +1,17 @@
+{
+  "name": "sait-nao-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/humbertn/sailsjs-passport-facebook",
+  "authors": [
+    "Gerson Estrada <gersonestrada.giron@gmai.com>"
+  ],
+  "description": "just a test",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.15"
+  }
+}

@@ -45,6 +45,7 @@ module.exports.routes = {
   'get /auth/:provider': 'AuthController.provider',
   'get /auth/:provider/callback': 'AuthController.callback',
   'get /auth/:provider/:action': 'AuthController.callback',
+  'get /flash/remoteHome': { view: '403' },  
 
   'get /verificado': { view: 'auth/after-auth' }
 
